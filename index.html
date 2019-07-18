@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Schedule</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid bg-success text-light text-center">
+      <h1 class="display-4">Train Schedule</h1>
+      <h2>Pick Your Train</h2>
+      <p class="lead">I choo choo choose you!</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+          <h3 class="bg-success text-light text-center">Current Trains</h3>
+          <table class="table table-striped">
+              <thead class="thead-success">
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th>Frequency (minutes)</th>
+                  <th>Next Arrival</th>
+                  <th>Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody class="current-trains">
+               
+              </tbody>
+            </table>
+            <form>
+                <h3 class="bg-success text-light text-center">Add Your Train</h3>
+                <div class="form-group">
+                  <label for="train-name-input">Train Name</label>
+                  <input type="text" class="form-control form-control-lg" id="train-name-input" placeholder="Enter Train Name">
+                </div>
+                <div class="form-group">
+                    <label for="destination-input">Destination</label>
+                    <input type="text" class="form-control form-control-lg" id="destination-input" placeholder="Enter Train Destination">
+                </div>
+                <div class="form-group">
+                    <label for="first-train-input">First Train Time (military time)</label>
+                    <input type="text" class="form-control form-control-lg" id="first-train-input" placeholder="HH:MM">
+                </div>
+                <div class="form-group">
+                    <label for="frequency-input">Frequency (minutes)</label>
+                    <input type="text" class="form-control form-control-lg" id="frequency-input" placeholder="Enter Train Frequency">
+                </div>
+                <button type="submit" class="btn btn-success btn-lg" id="add-train-btn">Add Train</button>
+              </form>
+
+
+      </div>
+    </div>
+  
+  
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  <script src="logic.js"></script>
+</body>
+
+</html>
